@@ -2,8 +2,10 @@ header{
     background-color: rgba(255, 0, 0, 0.39);
     height: 70px;
     padding: 10px;
-    
-    
+    display: flex;
+}
+header h1{
+    text-align: center;
 }
 
 .centre{
@@ -32,7 +34,6 @@ nav a{
     border: 5px outset #09C;
     padding: 3px;
     margin: 5px;
-    font-size: 20px;
 }
 
 nav a:hover{
