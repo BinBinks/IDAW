@@ -13,8 +13,8 @@
         if($currentPageId == $pageId)
             echo " id=\"selected\" ";
         
-        echo "href='$pageId.php'><span>$pageParameters[0]</span></a></li>\n";
+        echo "href='?page=$pageId.php'><span>$pageParameters[0]</span></a></li>\n";
         }
     echo "</ul></nav>";
     }
-?>
+?> 

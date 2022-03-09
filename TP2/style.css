@@ -11,8 +11,7 @@ header{
 
 .menu {
     background-color:rgb(0, 0, 0);
-    flex-basis: auto;
-    width: 200px;
+    flex-basis:auto;
 }
 
 ul{
@@ -40,4 +39,8 @@ ul{
 article{
     background-color: rgb(228, 223, 156);
 
+}
+
+#currentPageId{
+    font-weight: bold   ;
 }
