@@ -1,3 +1,6 @@
+<?php
+    require_once('template_header.php')
+?>
 <DOCTYPE html>
     <html>
         <head>
@@ -7,15 +10,15 @@
         </head>
         <body>
             <header>Projet</header>
-            <nav class="menu">
-                <ul>
-                <li><a href="index.html">Accueil</a></li>
-                <li><a href="cv.html">CV</a></li>
-                <li><a id="currentpage" href="projet.html">Projet</a></li>
-                </ul>
-            </nav>
+            <?php 
+                require_once('template_menu.php');
+                renderMenuToHTML('projets');
+            ?>
             <article>
                 
-            </article>    
+            </article>   
+            <?php
+                require_once('template_footer.php');
+            ?> 
         </body>
     </html>  
