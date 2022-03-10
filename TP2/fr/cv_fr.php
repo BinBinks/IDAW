@@ -9,3 +9,17 @@
 <h2> Experiences Professionnelles </h2>
 <ul>
     <li> Mai 2021 - Aout 2021   <b>Stage développement Portail Web équipe d'exploitation </b> </li>
+        <ul>
+            </li> Développement Web (Python Flask) </li>
+                <ul>
+                    <li>-Création d'une plateforme web de contrôle du réseau SS7 d'Orange </li>
+                    <li>-Création d'une base de donnée MySQL pour soutenir la plateforme</li>
+                </ul>
+            <li> Automatisation (Bash) </li>
+                <ul>
+                    <li>Ecriture de scripts pour récupérer les fichiers depuis serveurs distants </li>
+                    <li>Ecriture de scripts pour vérifier la présence des fichiers de backup du réseau SS7 </li>
+                </ul>
+        </ul> 
+    <li> Juin 
+    
