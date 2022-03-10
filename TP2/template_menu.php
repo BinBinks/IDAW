@@ -12,7 +12,7 @@
     foreach($mymenu as $pageId => $pageParameters) {
         echo "<li><a ";
         if($currentPageId == $pageId){
-            echo " id=\"selected\" ";
+            echo "id=\"selected\" ";
         }
         echo "href=index.php?page=" . $pageId . "&lang=" . $currentLang . "><span>$pageParameters[0]</span></a></li>\n";
         }
