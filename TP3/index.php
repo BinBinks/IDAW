@@ -14,7 +14,7 @@
             else if (isset($_COOKIE['style'])){
                 echo "<link rel='stylesheet' href='" . $_COOKIE['style'] . ".css'" . " type='text/css'>";
             } else {
-                echo "<link rel='stylesheet' href='" . $_COOKIE['style'] . ".css'" . " type='text/css'>";
+                echo "<link rel='stylesheet' href='style1.css'" . " type='text/css'>";
             }
          ?>
     </head>
