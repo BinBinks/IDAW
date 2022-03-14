@@ -1,6 +1,12 @@
 <?php 
     setcookie("style", $_GET['css'],time()+3600);
+    $_SESSION['login']
 ?> 
+
+<?php if(!isset($_GET['css'])){
+    $_GET['css'] = 'style1';
+    }
+?>
 
 <!DOCTYPE html>
 <html>
