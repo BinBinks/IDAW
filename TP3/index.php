@@ -1,10 +1,11 @@
 <?php 
     setcookie("style", $_GET['css'],time()+3600);
-    $_SESSION['login']
+    session_start();
 ?> 
 
-<?php if(!isset($_GET['css'])){
-    $_GET['css'] = 'style1';
+<?php 
+    if(!isset($_GET['css'])){
+        $_GET['css'] = "style1";
     }
 ?>
 
@@ -26,13 +27,24 @@
     </head>
     <body>
 
-<form id="style_form" action="index.php" method="GET">
-    <select name="css">
-        <option value="style1">style1</option>
-        <option value="style2">style2</option>
-    </select>
-    <input type="submit" value="Appliquer" />
-</form>
+    <?php 
+    if (isset($_SESSION['login'])){
+    echo "<h1>Bienvenu " . $_SESSION['login'] . "</h1>"; 
+    }
+    else{
+        echo "<a href='login.php'>Se connecter</a>";
+    }
+    ?>
 
+    <form id="style_form" action="index.php" method="GET">
+        <select name="css">
+            <option value="style1">style1</option>
+            <option value="style2">style2</option>
+        </select>
+        <input type="submit" value="Appliquer" />
+    </form>
+
+    <a href=deconnexion.php>Deconnexion</a>
+    
 </body>
 </html>
