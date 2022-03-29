@@ -1,25 +1,39 @@
-<?php
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>TP3 test connexion</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="cours.css">
+    </head>
+    <body>
+        <h1>Bases de données MySQL</h1>  
 
-    echo "test";
+        <?php
 
-    $servername = "localhost";
-    $username = "IDAW";
-    $password = "IDAW";
+            $servername = "localhost";
+            $username = "IDAW";
+            $password = "IDAW";
+            $mabase = "TP3users";
 
-    //on tente d'établir la connexion
-    try {
-        $conn = new PDO("mysql:host=$servername;dbname=TP3users", $username, $password);
-        //On définit la méthode d'erreur de PDO sur Exception
-        $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCPETION);
-        echo "connexion réussie";
-    }
+            $conn = mysqli_connect($servername, $username, $password, $mabase);
 
-    //on capture les exceptions, si une exception est lancée, on affiche les infos relatives à celles-ci
-    catch(PDOException $e){
-        echo "error" . $e->getMessage();
-    }
-    
+            if(!$conn){
+                die('Erreur : ' . mysqli_connect_error());
+            }
+            echo "Connexion réussie";
+            
+            $req = "select * from user_login";
 
+            $res = $conn->query($req);
 
+            echo "<table>";
+            while($data = mysqli_fetch_array($res)){
+                echo "<tr><td>" . $data['login'] . "</td><td>" . $data['pseudo'] . "</td></tr>";
+            }
 
-?>
+            echo "</table>";
+
+            mysqli_close($conn);
+        ?>
+    </body>
+</html>
